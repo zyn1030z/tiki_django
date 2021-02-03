@@ -1,5 +1,5 @@
 from django.urls import path, include
-from core.views import HomeView, LoginView, RegisterView, CartView, CheckoutView, ItemDetailView
+from core.views import HomeView, LoginView, RegisterView, CartView, CheckoutView, ItemDetailView, store
 
 app_name = 'core'
 
@@ -10,4 +10,5 @@ urlpatterns = [
     path('cart/', CartView.as_view(), name='cart'),
     path('checkout/', CheckoutView.as_view(), name='checkout'),
     path('product/<slug>/', ItemDetailView.as_view(), name='product'),
+    path('store', store, name='store'),
 ]

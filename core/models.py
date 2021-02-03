@@ -20,6 +20,10 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+    @staticmethod
+    def get_all_categories():
+        return Category.objects.all()
+
 
 class Product(models.Model):
     title = models.CharField(max_length=100, default='')
@@ -39,6 +43,21 @@ class Product(models.Model):
         return reverse("core:product", kwargs={
             'slug': self.slug
         })
+
+    @staticmethod
+    def get_products_by_id(ids):
+        return Product.objects.filter(id=ids)
+
+    @staticmethod
+    def get_all_products():
+        return Product.objects.all()
+
+    @staticmethod
+    def get_all_products_by_categoryid(category_id):
+        if category_id:
+            return Product.objects.filter(category=category_id)
+        else:
+            return Product.get_all_products()
 
     @property
     def imageURL(self):

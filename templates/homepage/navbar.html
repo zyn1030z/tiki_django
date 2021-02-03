@@ -1,271 +1,273 @@
-
 <div id="top-nav" class="bg-light smaller-font-size text-muted">
-        <nav class="navbar-expand-md container px-3">
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                    data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <nav class="navbar-expand-md container px-3">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link text-muted" href="#"><i class="la la-heart"></i> <span
-                                class="hidden-xs hidden-sm hidden-md">Wish List (0)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-muted" href="#"><i class="la la-shopping-cart"></i> <span
-                                class="hidden-xs hidden-sm hidden-md">Shopping Cart</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-muted" href="#"><i class="la la-share"></i> <span
-                                class="hidden-xs hidden-sm hidden-md">Checkout</span></a>
-                    </li>
-                </ul>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link text-muted" href="#"><i class="la la-heart"></i> <span
+                            class="hidden-xs hidden-sm hidden-md">Wish List (0)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-muted" href="#"><i class="la la-shopping-cart"></i> <span
+                            class="hidden-xs hidden-sm hidden-md">Shopping Cart</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-muted" href="#"><i class="la la-share"></i> <span
+                            class="hidden-xs hidden-sm hidden-md">Checkout</span></a>
+                </li>
+            </ul>
 
-                <ul class="navbar-nav float-right" data-component-currency>
-                    <li class="nav-item dropdown float-right">
-                        <a class="nav-link dropdown-toggle text-muted" href="#" data-toggle="dropdown"
-                           aria-haspopup="true" aria-expanded="false"><i class="la la-dollar"></i>&ensp;USD</a>
+            <ul class="navbar-nav float-right" data-component-currency>
+                <li class="nav-item dropdown float-right">
+                    <a class="nav-link dropdown-toggle text-muted" href="#" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false"><i class="la la-dollar"></i>&ensp;USD</a>
 
-                        <div class="dropdown-menu" aria-labelledby="dropdown01">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-
-                    </li>
-
-                    <li class="nav-item dropdown float-right" data-component-language>
-                        <a class="nav-link dropdown-toggle text-muted" href="#" data-toggle="dropdown"
-                           aria-haspopup="true" aria-expanded="false"><i class="la la-flag"></i>&ensp;EN</a>
-
-                        <div class="dropdown-menu" aria-labelledby="dropdown01">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-        </nav>
-    </div>
-    <header class="container mt-5">
-
-        <div class="row">
-
-            <div class="col-md-3">
-                <a href="/" class="logo">
-                    <!-- img src="img/logo.png"-->
-                    <h1 class="text-dark"><i class="text-secondary la la-plug"></i><span>electr<span
-                            class="text-secondary">o.</span></span></h1>
-                    <small class="text-dark">electronics shopping </small>
-
-                </a>
-            </div>
-
-            <div class="col-md-5">
-
-                <form class="">
-
-                    <div class="input-group input-group-lg mb-3" id="search-box" data-component-category>
-                        <input type="text" class="form-control default-font-size" placeholder="Tìm kiếm sản phẩm"
-                               aria-label="Search product">
-
-                        <select class="custom-select input-group-append form-control-lg no-border-x default-font-size">
-                            <option selected="">Tất cả danh mục</option>
-                            <option value="1">Điện thoại</option>
-                            <option value="2">Máy tính bảng</option>
-                            <option value="3">Three</option>
-                        </select>
-
-                        <div class="input-group-append">
-                            <button class="btn btn-primary" type="button"><i class="la la-search"></i></button>
-                        </div>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
                     </div>
-                </form>
 
-            </div>
+                </li>
 
-            <div class="col-md-4">
+                <li class="nav-item dropdown float-right" data-component-language>
+                    <a class="nav-link dropdown-toggle text-muted" href="#" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false"><i class="la la-flag"></i>&ensp;EN</a>
 
-                <div class="dropdown float-right" id="mini-cart" data-component-cart>
-                    <a class="btn btn-link dropdown-toggle bg-faded p-0 chevron-big" href="#"
-                       id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="la la-shopping-cart d-inline-block" style="font-size:42px"><span class="cart-items"
-                                                                                                   data-total_items>3</span></i>&ensp;
-                        <div class="d-inline-block text-dark"><span
-                                class="small d-block text-left">Giỏ hàng</span><span class="font-weight-bold"
-                                                                                      data-total>$3500.05</span></div>
-                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
 
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+    </nav>
+</div>
+<header class="container mt-5">
+
+    <div class="row">
+
+        <div class="col-md-3">
+            <a href="/" class="logo">
+                <!-- img src="img/logo.png"-->
+                <h1 class="text-dark"><i class="text-secondary la la-plug"></i><span>electr<span
+                        class="text-secondary">o.</span></span></h1>
+                <small class="text-dark">electronics shopping </small>
+
+            </a>
+        </div>
+
+        <div class="col-md-5">
+
+            <form class="">
+
+                <div class="input-group input-group-lg mb-3" id="search-box" data-component-category>
+                    <input type="text" class="form-control default-font-size" placeholder="Tìm kiếm sản phẩm"
+                           aria-label="Search product">
+
+                    <select class="custom-select input-group-append form-control-lg no-border-x default-font-size">
+                        <option selected="">Tất cả danh mục</option>
+                        <option value="1">Điện thoại</option>
+                        <option value="2">Máy tính bảng</option>
+                        <option value="3">Three</option>
+                    </select>
+
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button"><i class="la la-search"></i></button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="dropdown float-right" id="mini-cart" data-component-cart>
+                <a class="btn btn-link dropdown-toggle bg-faded p-0 chevron-big" href="#"
+                   id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="la la-shopping-cart d-inline-block" style="font-size:42px"><span class="cart-items"
+                                                                                               data-total_items>3</span></i>&ensp;
+                    <div class="d-inline-block text-dark"><span
+                            class="small d-block text-left">Giỏ hàng</span><span class="font-weight-bold"
+                                                                                 data-total>$3500.05</span></div>
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
 
 
-                        <table class="table table-sm table-striped">
+                    <table class="table table-sm table-striped">
+                        <tbody>
+                        <tr>
+                            <td class="text-center"><a
+                                    href="http://opencart3100.givan.ro/index.php?route=product/product&amp;language=en-gb&amp;product_id=40"><img
+                                    src="http://opencart3100.givan.ro/image/cache/catalog/demo/iphone_1-47x47.jpg"
+                                    alt="iPhone" title="iPhone" class="img-thumbnail"></a></td>
+                            <td class="text-left"><a
+                                    href="http://opencart3100.givan.ro/index.php?route=product/product&amp;language=en-gb&amp;product_id=40">iPhone</a>
+                            </td>
+                            <td class="text-right">x 1</td>
+                            <td class="text-right">$123.20</td>
+                            <td class="text-center">
+                                <button type="button" onclick="cart.remove('1');" data-toggle="tooltip" title=""
+                                        class="btn btn-danger btn-sm" data-original-title="Remove"><i
+                                        class="la la-times"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center"><a
+                                    href="http://opencart3100.givan.ro/index.php?route=product/product&amp;language=en-gb&amp;product_id=43"><img
+                                    src="http://opencart3100.givan.ro/image/cache/catalog/demo/macbook_1-47x47.jpg"
+                                    alt="MacBook" title="MacBook" class="img-thumbnail"></a></td>
+                            <td class="text-left"><a
+                                    href="http://opencart3100.givan.ro/index.php?route=product/product&amp;language=en-gb&amp;product_id=43">MacBook</a>
+                            </td>
+                            <td class="text-right">x 1</td>
+                            <td class="text-right">$602.00</td>
+                            <td class="text-center">
+                                <button type="button" onclick="cart.remove('2');" data-toggle="tooltip" title=""
+                                        class="btn btn-danger btn-sm" data-original-title="Remove"><i
+                                        class="la la-times"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center"><a
+                                    href="http://opencart3100.givan.ro/index.php?route=product/product&amp;language=en-gb&amp;product_id=30"><img
+                                    src="http://opencart3100.givan.ro/image/cache/catalog/demo/canon_eos_5d_1-47x47.jpg"
+                                    alt="Canon EOS 5D" title="Canon EOS 5D" class="img-thumbnail"></a></td>
+                            <td class="text-left"><a
+                                    href="http://opencart3100.givan.ro/index.php?route=product/product&amp;language=en-gb&amp;product_id=30">Canon
+                                EOS 5D</a>
+                                <br>
+                                - <small>Select Red</small></td>
+                            <td class="text-right">x 1</td>
+                            <td class="text-right">$98.00</td>
+                            <td class="text-center">
+                                <button type="button" onclick="cart.remove('3');" data-toggle="tooltip" title=""
+                                        class="btn btn-danger btn-sm" data-original-title="Remove"><i
+                                        class="la la-times"></i></button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <div>
+                        <table class="table table-sm table-bordered">
                             <tbody>
                             <tr>
-                                <td class="text-center"><a
-                                        href="http://opencart3100.givan.ro/index.php?route=product/product&amp;language=en-gb&amp;product_id=40"><img
-                                        src="http://opencart3100.givan.ro/image/cache/catalog/demo/iphone_1-47x47.jpg"
-                                        alt="iPhone" title="iPhone" class="img-thumbnail"></a></td>
-                                <td class="text-left"><a
-                                        href="http://opencart3100.givan.ro/index.php?route=product/product&amp;language=en-gb&amp;product_id=40">iPhone</a>
-                                </td>
-                                <td class="text-right">x 1</td>
-                                <td class="text-right">$123.20</td>
-                                <td class="text-center">
-                                    <button type="button" onclick="cart.remove('1');" data-toggle="tooltip" title=""
-                                            class="btn btn-danger btn-sm" data-original-title="Remove"><i
-                                            class="la la-times"></i></button>
-                                </td>
+                                <td class="text-right"><strong>Sub-Total</strong></td>
+                                <td class="text-right">$681.00</td>
                             </tr>
                             <tr>
-                                <td class="text-center"><a
-                                        href="http://opencart3100.givan.ro/index.php?route=product/product&amp;language=en-gb&amp;product_id=43"><img
-                                        src="http://opencart3100.givan.ro/image/cache/catalog/demo/macbook_1-47x47.jpg"
-                                        alt="MacBook" title="MacBook" class="img-thumbnail"></a></td>
-                                <td class="text-left"><a
-                                        href="http://opencart3100.givan.ro/index.php?route=product/product&amp;language=en-gb&amp;product_id=43">MacBook</a>
-                                </td>
-                                <td class="text-right">x 1</td>
-                                <td class="text-right">$602.00</td>
-                                <td class="text-center">
-                                    <button type="button" onclick="cart.remove('2');" data-toggle="tooltip" title=""
-                                            class="btn btn-danger btn-sm" data-original-title="Remove"><i
-                                            class="la la-times"></i></button>
-                                </td>
+                                <td class="text-right"><strong>Eco Tax (-2.00)</strong></td>
+                                <td class="text-right">$6.00</td>
                             </tr>
                             <tr>
-                                <td class="text-center"><a
-                                        href="http://opencart3100.givan.ro/index.php?route=product/product&amp;language=en-gb&amp;product_id=30"><img
-                                        src="http://opencart3100.givan.ro/image/cache/catalog/demo/canon_eos_5d_1-47x47.jpg"
-                                        alt="Canon EOS 5D" title="Canon EOS 5D" class="img-thumbnail"></a></td>
-                                <td class="text-left"><a
-                                        href="http://opencart3100.givan.ro/index.php?route=product/product&amp;language=en-gb&amp;product_id=30">Canon
-                                    EOS 5D</a>
-                                    <br>
-                                    - <small>Select Red</small></td>
-                                <td class="text-right">x 1</td>
-                                <td class="text-right">$98.00</td>
-                                <td class="text-center">
-                                    <button type="button" onclick="cart.remove('3');" data-toggle="tooltip" title=""
-                                            class="btn btn-danger btn-sm" data-original-title="Remove"><i
-                                            class="la la-times"></i></button>
-                                </td>
+                                <td class="text-right"><strong>VAT (20%)</strong></td>
+                                <td class="text-right">$136.20</td>
+                            </tr>
+                            <tr>
+                                <td class="text-right"><strong>Total</strong></td>
+                                <td class="text-right">$823.20</td>
                             </tr>
                             </tbody>
                         </table>
-
-                        <div>
-                            <table class="table table-sm table-bordered">
-                                <tbody>
-                                <tr>
-                                    <td class="text-right"><strong>Sub-Total</strong></td>
-                                    <td class="text-right">$681.00</td>
-                                </tr>
-                                <tr>
-                                    <td class="text-right"><strong>Eco Tax (-2.00)</strong></td>
-                                    <td class="text-right">$6.00</td>
-                                </tr>
-                                <tr>
-                                    <td class="text-right"><strong>VAT (20%)</strong></td>
-                                    <td class="text-right">$136.20</td>
-                                </tr>
-                                <tr>
-                                    <td class="text-right"><strong>Total</strong></td>
-                                    <td class="text-right">$823.20</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                            <p class="text-right"><a
-                                    href="{% url 'core:cart' %}"><strong><i
-                                    class="la la-shopping-cart"></i> View Cart</strong></a>&nbsp;&nbsp;&nbsp;<a
-                                    href="{% url 'core:checkout' %}"><strong><i
-                                    class="la la-share"></i> Checkout</strong></a></p>
-                        </div>
-
-
+                        <p class="text-right"><a
+                                href="{% url 'core:cart' %}"><strong><i
+                                class="la la-shopping-cart"></i> View Cart</strong></a>&nbsp;&nbsp;&nbsp;<a
+                                href="{% url 'core:checkout' %}"><strong><i
+                                class="la la-share"></i> Checkout</strong></a></p>
                     </div>
+
+
                 </div>
+            </div>
 
-                <div class="dropdown float-right" id="mini-user" data-component-user>
-                    <a class="btn btn-link dropdown-toggle bg-faded p-0 chevron-big" href="#"
-                       id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="la la-user d-inline-block" style="font-size:42px"></i>&ensp;
+            <div class="dropdown float-right" id="mini-user" data-component-user>
+                <a class="btn btn-link dropdown-toggle bg-faded p-0 chevron-big" href="#"
+                   id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="la la-user d-inline-block" style="font-size:42px"></i>&ensp;
 
-                        <div class="d-inline-block text-dark" data-if="login">
-                            <span class="small d-block text-left">Tài khoản</span>
-                            <span class="small font-weight-bold">Đăng nhập/Đăng ký</span>
-                        </div>
-
-                    </a>
-
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="{% url 'core:register' %}">Đăng ký</a>
-                        <a class="dropdown-item" href="{% url 'core:login' %}">Đăng nhập</a>
+                    <div class="d-inline-block text-dark" data-if="login">
+                        <span class="small d-block text-left">Tài khoản</span>
+                        <span class="small font-weight-bold">Đăng nhập/Đăng ký</span>
                     </div>
-                </div>
 
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="{% url 'core:register' %}">Đăng ký</a>
+                    <a class="dropdown-item" href="{% url 'core:login' %}">Đăng nhập</a>
+                </div>
             </div>
 
         </div>
 
-
-        <nav class="navbar navbar-light bg-white  rounded navbar-expand-md mt-4">
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                    data-target="#containerNavbar" aria-controls="containerNavbar" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    </div>
 
 
-            <div class="collapse navbar-collapse" id="containerNavbar">
-                <ul class="navbar-nav mr-auto">
-
-                    <li class="nav-item dropdown categories-dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdown04"
-                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="la la-bars"></i>&ensp;Danh mục
-                            <i class="la la-angle-down float-right"></i></a>
-                        <div class="dropdown-menu" aria-labelledby="dropdown04">
-                            <a class="dropdown-item" href="#"><i class="la la-desktop"></i> Điện thoại - Máy tính bảng</a>
-                            <a class="dropdown-item" href="#"><i class="la la-desktop"></i> Điện tử - Điện lạnh</a>
-                            <a class="dropdown-item" href="#"><i class="la la-desktop"></i> Phụ kiện - Thiết bị số</a>
-                        </div>
-                    </li>
+    <nav class="navbar navbar-light bg-white  rounded navbar-expand-md mt-4">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#containerNavbar" aria-controls="containerNavbar" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
 
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Trang chủ <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Dịch vụ giao hàng</a>
-                    </li>
+        <div class="collapse navbar-collapse" id="containerNavbar">
+            <ul class="navbar-nav mr-auto">
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Diễn đàn</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Hỗ trợ</a>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdown04"
-                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Về chúng tôi</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdown04">
-                            <a class="dropdown-item" href="#">FAQ</a>
-                            <a class="dropdown-item" href="#">Our Story</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Liên hệ</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+                <li class="nav-item dropdown categories-dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown04"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="la la-bars"></i>&ensp;Danh
+                        mục
+                        <i class="la la-angle-down float-right"></i></a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown04">
+                        {% for category in categories %}
+                            <a class="dropdown-item" href="/?category={{ category.id }}"><i class="la la-desktop"></i>
+                                {{ category.name }}
+                            </a>
+                        {% endfor %}
+                    </div>
+                </li>
 
 
-    </header>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Trang chủ <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Dịch vụ giao hàng</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Diễn đàn</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Hỗ trợ</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown04"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Về chúng tôi</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown04">
+                        <a class="dropdown-item" href="#">FAQ</a>
+                        <a class="dropdown-item" href="#">Our Story</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Liên hệ</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+</header>
