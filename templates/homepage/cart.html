@@ -1,0 +1,130 @@
+{% extends 'homepage/base.html' %}
+{% block content %}
+    <div class="page-container">
+        {% include 'homepage/navbar.html' %}
+
+        <div class="content">
+
+            <div class="container">
+                <div class="thickline"></div>
+            </div>
+
+            <div class="container">
+
+
+                <div class="row">
+                    <div class="col-12">
+
+                        <form action="" method="post" enctype="multipart/form-data">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" data-cart>
+                                    <thead>
+                                    <tr>
+                                        <td class="text-center">Image</td>
+                                        <td class="text-left">Product Name</td>
+                                        <td class="text-left">Model</td>
+                                        <td class="text-left">Quantity</td>
+                                        <td class="text-right">Unit Price</td>
+                                        <td class="text-right">Total</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+
+
+                                    <tr data-product>
+                                        <td class="text-center">
+                                            <a href="https://demo.opencart.com/index.php?route=product/product&amp;product_id=40"
+                                               data-url>
+                                                <img src="https://demo.opencart.com/image/cache/catalog/demo/iphone_1-47x47.jpg"
+                                                     alt="iPhone" title="iPhone" data-img>
+                                            </a>
+                                        </td>
+                                        <td class="text-left"><a
+                                                href="https://demo.opencart.com/index.php?route=product/product&amp;product_id=40"
+                                                data-name>iPhone 5</a>
+                                            <span class="text-danger">***</span>
+                                        </td>
+                                        <td class="text-left">product 11</td>
+                                        <td class="text-left">
+                                            <div class="input-group btn-block" style="max-width: 200px;">
+                                                <input type="text"
+                                                       name="quantity[YToxOntzOjEwOiJwcm9kdWN0X2lkIjtpOjQwO30=]"
+                                                       value="2" size="1" class="form-control">
+                                                <span class="input-group-btn">
+				<button type="submit" data-toggle="tooltip" title="" class="btn btn-primary"
+                        data-original-title="Update"><i class="la la-refresh"></i></button>
+				<button type="button" data-toggle="tooltip" title="" class="btn btn-danger"
+                        onclick="cart.remove('YToxOntzOjEwOiJwcm9kdWN0X2lkIjtpOjQwO30=');" data-original-title="Remove"><i
+                        class="la la-times-circle"></i></button></span>
+                                            </div>
+                                        </td>
+                                        <td class="text-right">$123.20</td>
+                                        <td class="text-right">$246.40</td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td class="text-center">
+                                            <a href="https://demo.opencart.com/index.php?route=product/product&amp;product_id=43"><img
+                                                    src="https://demo.opencart.com/image/cache/catalog/demo/macbook_1-47x47.jpg"
+                                                    alt="MacBook" title="MacBook">
+                                            </a>
+                                        </td>
+                                        <td class="text-left"><a
+                                                href="https://demo.opencart.com/index.php?route=product/product&amp;product_id=43">MacBook</a>
+                                            <span class="text-danger">***</span>
+                                            <br>
+                                            <small>Reward Points: 1200</small>
+                                        </td>
+                                        <td class="text-left">Product 16</td>
+                                        <td class="text-left">
+                                            <div class="input-group btn-block" style="max-width: 200px;">
+                                                <input type="text"
+                                                       name="quantity[YToxOntzOjEwOiJwcm9kdWN0X2lkIjtpOjQzO30=]"
+                                                       value="2" size="1" class="form-control">
+                                                <span class="input-group-btn">
+				<button type="submit" data-toggle="tooltip" title="" class="btn btn-primary"
+                        data-original-title="Update"><i class="la la-refresh"></i></button>
+				<button type="button" data-toggle="tooltip" title="" class="btn btn-danger"
+                        onclick="cart.remove('YToxOntzOjEwOiJwcm9kdWN0X2lkIjtpOjQzO30=');" data-original-title="Remove"><i
+                        class="la la-times-circle"></i></button></span>
+                                            </div>
+                                        </td>
+                                        <td class="text-right">$602.00</td>
+                                        <td class="text-right">$1,204.00</td>
+                                    </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        {% include 'homepage/footer.html' %}
+    </div>
+{% endblock %}
+
+{% block jsblock %}
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script>
+        $('#product-tabs a').click(function (e) {
+            e.preventDefault()
+            $(this).tab('show')
+        })
+    </script>
+    <!-- script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script -->
+    <script src="js/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+    <!-- script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script -->
+    <script src="js/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+{% endblock %}
