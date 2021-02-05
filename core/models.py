@@ -7,6 +7,22 @@ class CustomerUser(AbstractUser):
     phone_number = models.CharField(max_length=15, default='')
     address = models.CharField(max_length=255, default='')
 
+    @staticmethod
+    def get_customer_by_email(email):
+        try:
+            return CustomerUser.objects.get(email=email)
+        except:
+            return False
+
+    def register(self):
+        self.save()
+
+    def isExists(self):
+        if CustomerUser.objects.filter(email=self.email):
+            return True
+
+        return False
+
 
 # Create your models here.
 class Category(models.Model):

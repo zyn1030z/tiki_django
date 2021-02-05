@@ -89,7 +89,7 @@
 
         <div class="col-md-4">
 
-            <div class="dropdown float-right col-6" id="mini-cart" data-component-cart>
+            <div class="dropdown float-right" id="mini-cart" data-component-cart>
                 <a class="btn btn-link dropdown-toggle bg-faded p-0 chevron-big" href="#"
                    id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="la la-shopping-cart d-inline-block" style="font-size:42px"><span class="cart-items"
@@ -188,39 +188,24 @@
 
                 </div>
             </div>
-            {% if request.session.customer %}
-                <div class="float-right col-6" id="mini-user" data-component-user>
-                    <a class="btn btn-link bg-faded p-0 chevron-big" href="logout"
-                       id="dropdownMenuLink" aria-haspopup="true">
-                        <i class="la la-user d-inline-block" style="font-size:42px"></i>&ensp;
 
-                        <div class="d-inline-block text-dark">
-                            <span class="small d-block text-left">Tài khoản</span>
-                            <span class="small font-weight-bold">Đăng xuất</span>
-                        </div>
+            <div class="dropdown float-right" id="mini-user" data-component-user>
+                <a class="btn btn-link dropdown-toggle bg-faded p-0 chevron-big" href="#"
+                   id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="la la-user d-inline-block" style="font-size:42px"></i>&ensp;
 
-                    </a>
-                </div>
-            {% else %}
-                <div class="dropdown float-right col-6" id="mini-user" data-component-user>
-                    <a class="btn btn-link dropdown-toggle bg-faded p-0 chevron-big" href="#"
-                       id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="la la-user d-inline-block" style="font-size:42px"></i>&ensp;
-
-                        <div class="d-inline-block text-dark" data-if="login">
-                            <span class="small d-block text-left">Tài khoản</span>
-                            <span class="small font-weight-bold">Đăng nhập/Đăng ký</span>
-                        </div>
-
-                    </a>
-
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="{% url 'core:register' %}">Đăng ký</a>
-                        <a class="dropdown-item" href="{% url 'core:login' %}">Đăng nhập</a>
+                    <div class="d-inline-block text-dark" data-if="login">
+                        <span class="small d-block text-left">Tài khoản</span>
+                        <span class="small font-weight-bold">Đăng nhập/Đăng ký</span>
                     </div>
-                </div>
-            {% endif %}
 
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="{% url 'core:register' %}">Đăng ký</a>
+                    <a class="dropdown-item" href="{% url 'core:login' %}">Đăng nhập</a>
+                </div>
+            </div>
 
         </div>
 

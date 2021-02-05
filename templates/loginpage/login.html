@@ -13,16 +13,9 @@
             <div class="container">
 
                 <div class="row">
-                    <div class="col-12 align-center">
+                    <div class="col-6">
                         <h3>Login</h3>
-                        <form action="" method="POST">
-                            {% csrf_token %}
-
-                            {% if error %}
-                                <div class="alert alert-danger" role="alert">
-                                    {{ error }}
-                                </div>
-                            {% endif %}
+                        <form>
                             <div class="form-group row">
                                 <label for="inputEmail1" class="col-sm-2 col-form-label">Email</label>
                                 <div class="col-sm-10">
@@ -45,6 +38,39 @@
                             </div>
                         </form>
                     </div>
+
+                    <div class="col-6 ">
+                        <h3>New account</h3>
+                        <form>
+                            <div class="form-group row">
+                                <label for="inputEmail2" class="col-sm-2 col-form-label">Email</label>
+                                <div class="col-sm-10">
+                                    <input type="email" name="email" class="form-control" id="inputEmail2"
+                                           placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputPassword2" class="col-sm-2 col-form-label">Password</label>
+                                <div class="col-sm-10">
+                                    <input type="password" name="password" class="form-control" id="inputPassword2"
+                                           placeholder="Password">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputPassword3" class="col-sm-2 col-form-label">Confirm password</label>
+                                <div class="col-sm-10">
+                                    <input type="password" name="cofirm-password" class="form-control"
+                                           id="inputPassword3" placeholder="Password">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="offset-sm-2 col-sm-10">
+                                    <button type="submit" class="btn btn-primary">Create account</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
 
 
@@ -63,6 +89,6 @@
     <script src="{% static 'homepage/js/jquery.min.js' %}"></script>
     <!-- script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script -->
     <script src="{% static 'homepage/js/popper.min.js' %}"></script>
-    <script src="{% static 'homepage/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
 
 {% endblock %}
