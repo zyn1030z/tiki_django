@@ -190,7 +190,7 @@
             </div>
             {% if request.session.customer %}
                 <div class="float-right col-6" id="mini-user" data-component-user>
-                    <a class="btn btn-link bg-faded p-0 chevron-big" href="logout"
+                    <a class="btn btn-link bg-faded p-0 chevron-big" href="{% url 'core:logout' %}"
                        id="dropdownMenuLink" aria-haspopup="true">
                         <i class="la la-user d-inline-block" style="font-size:42px"></i>&ensp;
 
@@ -254,7 +254,7 @@
 
 
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Trang chủ <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{% url 'core:home' %}">Trang chủ <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Dịch vụ giao hàng</a>

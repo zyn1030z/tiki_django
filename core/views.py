@@ -28,7 +28,9 @@ def store(request):
     data = {}
     data['products'] = products
     data['categories'] = categories
-    print('you are : ', request.session.get('email'))
+    # print('you are : ', request.session.get('email'))
+    username = None
+
     return render(request, 'homepage/index_categories.html', data)
 
 
@@ -61,7 +63,6 @@ class LoginView(View):
                     return HttpResponseRedirect(LoginView.return_url)
                 else:
                     LoginView.return_url = None
-                    print(request.session['customer'])
                     return redirect('core:home')
             else:
                 error_message = 'Thông tin đăng nhập không đúng!!!'
