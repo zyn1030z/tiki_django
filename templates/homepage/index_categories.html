@@ -13,13 +13,13 @@
                         <section class="container products clearfix">
 
                             <div class="owl-carousel owl-theme">
-                                {% for item in products %}
+                                {% for product in products %}
                                     <div class="item" data-product>
 
                                         <article class="product">
 
-                                            <a href="{{ item.get_absolute_url }}" data-url>
-                                                <img src="{{ item.image.url }}" class="img-fluid" data-img>
+                                            <a href="{{ product.get_absolute_url }}" data-url>
+                                                <img src="{{ product.image.url }}" class="img-fluid" data-img>
                                             </a>
 
                                             <h3>
@@ -34,23 +34,27 @@
                                             <div class="price-group">
                                                 <div class="old-price">
                                                     <span class="currency" data-product-currency>$</span> <span
-                                                        data-product-price>{{ item.price }}</span>
+                                                        data-product-price>{{ product.price }}</span>
                                                 </div>
 
                                                 <div class="price">
                                                     <span class="currency" data-product-currency>$</span> <span
-                                                        data-product-price>{{ item.sale_price }}</span>
+                                                        data-product-price>{{ product.sale_price }}</span>
                                                 </div>
                                             </div>
-
-
-                                            <div class="btngroup">
-                                                <a type="button" class="btn btn-sm btn-secondary" title="Add to Cart"
-                                                   href=""
-                                                   data-product-cart-url data-vvveb-action="addCart" data-product_id=40>
-                                                    <i class="la la-shopping-cart"></i> Thêm vào giỏ hàng
-                                                </a>
-                                            </div>
+                                            <form class="btn-block" action="/#{{ product.id }}" method="POST">
+                                                {% csrf_token %}
+                                                <input hidden type="text" name="product" value="{{ product.id }}"/>
+                                                <input
+                                                        type="submit"
+                                                        class="float-right form-control btn btn-sm btn-secondary"
+                                                        value="Thêm vào giỏ hàng"
+                                                />
+                                                {#                                                <a type="button" class="btn btn-sm btn-secondary" title="Add to Cart"#}
+                                                {#                                                   data-product-cart-url data-vvveb-action="addCart" data-product_id=40>#}
+                                                {#                                                    <i class="la la-shopping-cart"></i> Thêm vào giỏ hàng#}
+                                                {#                                                </a>#}
+                                            </form>
 
 
                                         </article><!-- product -->
@@ -72,19 +76,19 @@
 {% endblock %}
 {% block jsblock %}
 
-    <div class="alert alert-light alert-dismissible fade alert-top" role="alert">
-        <div class="container">
-
-            <div class="message">
-                Product was added to cart.
-            </div>
-
-
-            <button type="button" class="close" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-    </div>
+    {#        <div class="alert alert-light alert-dismissible fade alert-top" role="alert">#}
+    {#            <div class="container">#}
+    {##}
+    {#                <div class="message">#}
+    {#                    Product was added to cart.#}
+    {#                </div>#}
+    {##}
+    {##}
+    {#                <button type="button" class="close" aria-label="Close">#}
+    {#                    <span aria-hidden="true">&times;</span>#}
+    {#                </button>#}
+    {#            </div>#}
+    {#        </div>#}
 
 
     <!-- Bootstrap core JavaScript

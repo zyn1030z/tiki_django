@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form class="btn-block" action="" method="POST">
+    {% csrf_token %}
+    <input hidden type="text" name="product" value="{{ product.id }}"/>
+    <input
+            type="submit"
+            class="float-right form-control btn btn-sm btn-secondary"
+            value="Thêm vào giỏ hàng"
+    />
+
+</body>
+</html>

@@ -6,10 +6,35 @@ from django.views import View
 # Create your views here.
 from django.views.generic import ListView, DetailView
 
-from core.models import Product, Category, CustomerUser
+from core.models import Product, Category, CustomerUser, OrderItem
 
 
-class HomeView(ListView):
+class HomeView(View):
+    def post(self, request):
+        product = request.POST.get('product')
+        remove = request.POST.get('remove')
+        cart = request.session.get('cart')
+        if cart:
+            quantity = cart.get(product)
+            if quantity:
+                if remove:
+                    if quantity <= 1:
+                        cart.pop(product)
+                    else:
+                        cart[product] = quantity - 1
+                else:
+                    cart[product] = quantity + 1
+
+            else:
+                cart[product] = 1
+        else:
+            print('cart is empty')
+            cart = {}
+            cart[product] = 1
+        request.session['cart'] = cart
+        print('cart', request.session['cart'])
+        return redirect('core:home')
+
     def get(self, request):
         return HttpResponseRedirect(f'/store{request.get_full_path()[1:]}')
         # products = Product.get_all_products()
@@ -18,6 +43,10 @@ class HomeView(ListView):
 
 
 def store(request):
+    cart = request.session.get('cart')
+    print('cart la', cart)
+    if not cart:
+        request.session['cart'] = {}
     categories = Category.get_all_categories()
     categoryID = request.GET.get('category')
     products = None
@@ -30,7 +59,6 @@ def store(request):
     data['categories'] = categories
     # print('you are : ', request.session.get('email'))
     username = None
-
     return render(request, 'homepage/index_categories.html', data)
 
 
@@ -157,7 +185,15 @@ class RegisterView(View):
 
 class CartView(View):
     def get(self, request):
-        return render(request, 'homepage/cart.html')
+        ids = list(request.session.get('cart').keys())
+        products = Product.get_products_by_id(ids)
+        # orderItem = OrderItem.get_total()
+        # data = {
+        #     'products:', products,
+        #     'orderItem': orderItem
+        # }
+        print('products:', products)
+        return render(request, 'homepage/cart.html', {'products': products})
 
 
 class CheckoutView(View):
@@ -168,3 +204,11 @@ class CheckoutView(View):
 class ItemDetailView(DetailView):
     model = Product
     template_name = "homepage/product.html"
+
+
+def test(request):
+    if request.method == 'POST':
+        product = request.POST.get('product')
+        print(product)
+        print('test')
+    return render(request, 'homepage/test.html')

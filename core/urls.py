@@ -1,5 +1,5 @@
 from django.urls import path, include
-from core.views import HomeView, LoginView, RegisterView, CartView, CheckoutView, ItemDetailView, store, logout
+from core.views import HomeView, LoginView, RegisterView, CartView, CheckoutView, ItemDetailView, store, logout, test
 from .middlewares.auth import auth_middleware
 
 app_name = 'core'

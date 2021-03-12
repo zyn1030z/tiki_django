@@ -59,29 +59,29 @@ VvvebTheme.Alert  = {
 }
 
 VvvebTheme.Gui = {
-	
+
 	init: function() {
 		$("[data-vvveb-action]").each(function () {
 			on = "click";
 			if (this.dataset.vvvebOn) on = this.dataset.vvvebOn;
-			
+
 			$(this).on(on, VvvebTheme.Gui[this.dataset.vvvebAction]);
 		});
 	},
-	
+
 	addCart : function () {
-		
+
 		var product = $(this).parents("[data-product]");
 		var img = $("[data-img]", product).attr("src");
 		var name = $("[data-name]", product).text();
-		
+
 		VvvebTheme.Cart.add(this.dataset.product_id);
 
-		VvvebTheme.Alert.show('<img height=50 src="' + img + '"> &ensp; ' +  name +' was added to cart');
-		
+		VvvebTheme.Alert.show('<img height=50 src="' + img + '"> &ensp; ' +  name +' đã được thêm vào giỏ hàng');
+
 		return false;
 	}
-}	
-		
+}
+
 
 VvvebTheme.Gui.init();
